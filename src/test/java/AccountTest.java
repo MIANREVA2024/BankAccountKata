@@ -16,4 +16,15 @@ public class AccountTest {
         double balance = account.getBalance();
         assertEquals(0, balance);
     }
+    @Test
+    @DisplayName("depositar dinero")
+    void testWhenTheDepositBalanceIsPositive(){
+        //given
+        //When
+        Account account = new Account(1000);
+
+        //Then
+        double balance = account.getBalance();
+        assertEquals(1000, balance);
+    }
 }
