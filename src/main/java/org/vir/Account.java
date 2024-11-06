@@ -16,6 +16,11 @@ public class Account {
     }
 
     public void deposit(double amount) {
+        if (amount < 0) return;
         this.balance += amount;
+    }
+
+    public void retirar(double amount) {
+        this.balance -= amount;
     }
 }

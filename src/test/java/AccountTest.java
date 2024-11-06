@@ -39,5 +39,17 @@ public class AccountTest {
         double balance = account.getBalance();
         assertEquals(1500, balance);
     }
+    @Test
+    @DisplayName("Retirar dinero de su cuenta")
+    void testWhenWithdraw(){
+        //given=>una cuenta
+        Account account =new Account(1500);
+
+        //When=>retirar una cantidad x
+        account.retirar(200);
+        //Then=>al verificar cuenta con fondos
+        double balance = account.getBalance();
+        assertEquals(1300, balance);
+    }
 
 }
