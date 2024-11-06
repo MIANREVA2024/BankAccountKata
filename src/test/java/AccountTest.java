@@ -17,8 +17,8 @@ public class AccountTest {
         assertEquals(0, balance);
     }
     @Test
-    @DisplayName("depositar dinero")
-    void testWhenTheDepositBalanceIsPositive(){
+    @DisplayName("crear cuenta con monto especifico de 1000")
+    void testWhenTheBalanceIs1000(){
         //given
         //When
         Account account = new Account(1000);
@@ -27,4 +27,17 @@ public class AccountTest {
         double balance = account.getBalance();
         assertEquals(1000, balance);
     }
+    @Test
+    @DisplayName("depositar dinero en su cuenta 500")
+    void testWhenDeposit500(){
+        //given=>una cuenta
+        Account account =new Account(1000);
+
+        //When=>depositar una cantidad x
+        account.deposit(500);
+        //Then=>al depositar se sume al saldo inicial
+        double balance = account.getBalance();
+        assertEquals(1500, balance);
+    }
+
 }
