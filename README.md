@@ -39,6 +39,13 @@ consultar el saldo actual de sus cuentas.
 - **Consultar el Saldo:**
     - Los usuarios deben poder consultar el saldo actual de su cuenta en cualquier momento.
     - El saldo debe reflejar todas las operaciones anteriores (depósitos y retiradas).
+                          
+                           
+                           DATE           | AMOUNT  | BALANCE
+                           Primer Retiro  | 200.00  | 1300.00
+                           Primer Deposito| 500.00  | 1500.00
+                           Crea cuenta    | 1000.00 | 1000.00
+                           
 ## Reglas
 - No se permite retirar más dinero del que hay disponible en la cuenta.
 - El número de cuenta debe ser único para cada cuenta.
