@@ -21,6 +21,12 @@ public class Account {
     }
 
     public void retirar(double amount) {
-        this.balance -= amount;
+        if (amount > 0 && this.balance > amount) {
+            this.balance -= amount;
+            return ;
+        }
+
     }
+
+
 }
