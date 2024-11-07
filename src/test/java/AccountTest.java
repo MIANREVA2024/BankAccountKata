@@ -77,5 +77,18 @@ public class AccountTest {
         double balance = account.getBalance();
         assertEquals(1500, balance);
     }
+    @Test
+    @DisplayName("consultar saldo despues de operaciones de deposito y retiro")
+    void testWhenBalanceAfterOperations(){
+        //given=>una cuenta
+        Account account =new Account(1000);
+
+        //When=>retirar una cantidad x
+        account.deposit(500);
+        account.retirar(200);
+        //Then=>al verificar cuenta con fondos
+        double balance = account.getBalance();
+        assertEquals(1300, balance);
+    }
 
 }
